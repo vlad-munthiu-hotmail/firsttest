@@ -8,6 +8,7 @@ namespace TestVeracode
         {
             var mytest = new MyDisposableClass();
             mytest.DoSomething();
+            int i = 2;
         }
     }
 
