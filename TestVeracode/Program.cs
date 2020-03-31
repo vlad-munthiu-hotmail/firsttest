@@ -6,10 +6,8 @@ namespace TestVeracode
     {
         static void Main(string[] args)
         {
-            using (var mytest = new MyDisposableClass())
-            {
-                mytest.DoSomething();
-            }
+            var mytest = new MyDisposableClass();
+            mytest.DoSomething();
         }
     }
 
@@ -19,10 +17,8 @@ namespace TestVeracode
         public void DoSomething()
         {
             _calls++;
-            using (var a = new SecondDisposable())
-            {
-                a.Run();
-            }
+            var a = new SecondDisposable()
+            a.Run();
         }
 
         private bool _disposed;
